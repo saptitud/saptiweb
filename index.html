@@ -37,12 +37,12 @@ title: Home
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">{{ site.logo }}</a></h1>
+								<h1><a href="index.html" id="logo">{{ site.centertitle }}</a></h1>
 								<hr />
-								<p>{{ site.underlogo }}</p>
+								<p>{{ site.centersub }}</p>
 							</header>
 							<footer>
-								<a href="#features" class="button circled scrolly">{{ site.button }}</a>
+								<a href="#features" class="button circled scrolly"><i class="fa-solid fa-caret-down fa-2xl fa-beat"style="--fa-animation-duration: 2s;"></i></a>
 							</footer>
 						</div>
 
@@ -50,7 +50,7 @@ title: Home
 						<nav id="nav">
 							<ul>
 								<li><a href="index.html">{{ site.nav1 }}</a></li>
-								<li><a href="#features" class="scrolly">{{ site.nav2 }}</a></li>
+								<li><a href="#services" class="scrolly">{{ site.nav2 }}</a></li>
 								<li><a href="#contact" class="scrolly">{{ site.nav3 }}</a></li>
 							</ul>
 						</nav>
@@ -68,8 +68,8 @@ title: Home
 
 					<section id="features" class="container special">
 						<header>
-							<h2>Saptitud</h2>
-							<p>Una consultoría especializada en SAP que brinda servicios de consultoría y colaboración externa para proyectos, asegurando el éxito de su implementación. </p>
+							<h2>{{ site.title1 }}</h2>
+							<p>{{ site.exp1 }}</p>
 						</header>
 						<div class="row">
 							<article class="col-4 col-12-mobile special">
@@ -109,6 +109,32 @@ title: Home
 
 				</div>
 
+			<!-- Main -->
+				<div class="wrapper style2">
+					
+					<article id="main" class="container special">
+						<a href="#" class="image featured"><img src="images/pic6.avif" alt="" /></a>
+						
+						<header id="services">
+							<h2><a href="#">{{ site.title2 }}</a></h2>
+							<p>
+								{{ site.exp2}}
+							</p>
+						</header>
+						<p>
+							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Soporte SAP</h3>
+							<p>Siempre a tu lado. Nuestro soporte técnico te garantiza una operación ininterrumpida. Soporte SAP 23/7 a tu disposición.</p>
+							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Interfaces</h3>
+							<p>Conecta tus sistemas y mejora la eficiencia. Desarrollamos interfaces personalizadas para integrar SAP con tus otras aplicaciones, optimizando el flujo de información y eliminando tareas manuales.</p>
+							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Soporte técnico</h3>
+							<p>Contamos con un equipo de expertos listos para ayudarte a resolver cualquier incidencia y mantener tu sistema funcionando al máximo rendimiento.</p>
+							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Optimización de proceso</h3>
+							<p>Maximiza la eficiencia de tus procesos con SAP. Identificamos y eliminamos cuellos de botella para optimizar tus operaciones y reducir costos.</p>
+						</p>
+						
+					</article>
+				</div>
+
 			<!-- Footer -->
 				<div id="footer">
 					<section id="contact">
@@ -118,12 +144,14 @@ title: Home
 
 									<!-- Contact -->
 										<section class="contact">
+											<i class="icon fa-solid fa-paper-plane fa-3x fa-bounce" style="--fa-animation-duration: 5s;"></i>
+											<br><br><br>
 											<header>
 												<h3>¿Quiéres optimizar tus procesos con SAP?</h3>
 											</header>
 											<p>¡Contacta con nosotros!</p>
 											<ul class="icons">
-												<li><a href="mailto:info@saptitud.es" class="icon fa fa-envelope"><span class="label">Email</span></a></li>
+												<li><a href="mailto:info@saptitud.es" class="icon fa-regular fa-envelope"><span class="label">Email</span></a></li>
 												<li><a href="https://www.linkedin.com/company/saptitud-solutions/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
 											</ul>
 										</section>
