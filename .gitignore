@@ -1,0 +1,25 @@
+# Jekyll specific
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler specific
+.bundle/
+vendor/
+
+# Logs and temp files
+*.log
+*.tmp
+*.pid
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+node_modules/
+yarn-error.log
+
+# If you're using Jekyll Admin plugin
+.jekyll-admin
