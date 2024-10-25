@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+                    <!-- Nav -->
+					{% include nav.html %}
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="/index.html" id="logo">{{ site.centertitle }}</a></h1>
+							</header>
+						</div>
+
+					
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<article id="main" class="special">
+							<header>
+								<h2><a href="#">{{ page.title }}</a></h2>
+                                {{ page.date | date: "%d/%m/%Y" }}
+								<p>
+									{{ page.subtitle }}<br>
+								</p>
+							</header>
+                            <a href="#" class="image featured"><img src="{{ page.image }}" alt=""></a>
+                            <p>
+                            {{ content}}
+                            </p>
+						</article>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				{% include footer.html %}
+				
+
+		</div>
+
+		<!-- Scripts -->
+		{% include scripts.html %}
+
+	</body>
+</html>

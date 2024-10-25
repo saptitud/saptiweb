@@ -6,6 +6,7 @@ keywords: consultoría especializada, consultoria, sap, proyectos
 nav1: Home
 nav2: Servicios
 nav3: Contacto
+nav4: Blog
 
 centertitle: Saptitud Solutions
 centersub: Consultoría Especializada en SAP - Servicios de Colaboración Externa
@@ -15,3 +16,8 @@ expl: Una consultoría especializada en SAP que brinda servicios de consultoría
 
 title2: Nuestros Servicios
 exp2: Ofrecemos soluciones personalizadas para integrar y optimizar tus procesos con SAP, impulsando la eficiencia y reduciendo costos operativos.
+
+#permalink: /:year-:month-:day/:title/
+
+blogtitle: Últimas Entradas
+blogsub: Ultimas entradas del blog

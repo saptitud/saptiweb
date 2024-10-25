@@ -1,0 +1,10 @@
+<nav id="nav">
+    <ul>
+        <li><a href="/index.html">{{ site.nav1 }}</a></li>
+        {% if page.url == "/" %}
+            <li><a href="#services" class="scrolly">{{ site.nav2 }}</a></li>
+            <li><a href="#contact" class="scrolly">{{ site.nav3 }}</a></li>
+        {% endif %}
+        <li><a href="/blog.html">{{ site.nav4 }}</a></li>
+    </ul>
+</nav>
