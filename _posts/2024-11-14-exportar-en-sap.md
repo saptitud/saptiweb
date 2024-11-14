@@ -8,8 +8,6 @@ tags: [sap, roles, gui, authorization]
 image: /assets/images/extraer_en_sap/1.png
 ---
 
-# CÓMO SOLUCIONAR LA FALTA DE AUTORIZACIÓN PARA EXTRAER LISTAS EN SAP
-
 ## Descripción
 
 La falta de autorización para realizar extracciones de listas en SAP es una problemática recurrente que afecta a muchos usuarios. Esta limitación se presenta cuando intentan exportar datos de una lista en SAP y reciben un mensaje de error por falta de permisos o, en otros casos, cuando la opción "Export" aparece en gris (deshabilitada). Este artículo explicará las causas del problema, cómo solucionarlo y la función de cada actividad dentro del objeto S_GUI para la exportación de datos.
@@ -21,7 +19,6 @@ SAP controla el acceso a diversas funcionalidades mediante objetos de autorizaci
 Existen dos formas comunes en las que este problema se manifiesta:
 
 **- Error de autorización**: Cuando un usuario intenta exportar una lista y no tiene la autorización necesaria, recibe un mensaje de error indicando la falta de permisos para realizar esta acción.
-  
 **- Opción "Export" en gris**: En otros casos, el botón de exportación aparece deshabilitado, en gris, como si estuviera bloqueado. Esto sucede cuando el usuario tiene una configuración de permisos limitada en el objeto S_GUI, que le impide realizar la exportación aunque no reciba un mensaje de error explícito.
 
 ## Impacto en los usuarios
@@ -33,11 +30,8 @@ La falta de autorización para exportar listas afecta significativamente la prod
 El objeto **S_GUI** incluye diferentes valores de actividad que determinan qué operaciones están permitidas en la interfaz de usuario de SAP. A continuación se detallan las principales actividades de S_GUI y sus funciones:
 
 **- 02 - Modificar**: Permite realizar modificaciones en las listas dentro de SAP. Esta actividad generalmente se asigna a usuarios que necesitan editar los datos directamente en el sistema, aunque no se utiliza comúnmente para la exportación.
-  
 **- 04 - Imprimir, tratar mensajes**: Autoriza la impresión de listas y la gestión de mensajes dentro del sistema. Esta actividad es útil para los usuarios que necesitan imprimir reportes sin necesidad de exportarlos a otros formatos.
-  
 **- 60 - Importar**: Autoriza la importación de datos desde archivos externos a SAP. Aunque no está relacionado con la exportación, este permiso permite que los usuarios carguen datos desde archivos externos, lo cual puede ser necesario en algunas operaciones.
-  
 **- 61 - Exportar**: Permite la exportación de listas desde SAP a otros formatos, como Excel o archivos de texto. Esta es la actividad necesaria para habilitar la exportación, y es la que debe asignarse a los usuarios que necesitan descargar datos para análisis externos.
 
 ## Cómo identificar y resolver el problema
@@ -53,7 +47,6 @@ Si un usuario informa que no puede exportar listas en SAP, el administrador pued
 Para otorgar al usuario el permiso de exportación, el administrador de SAP debe seguir estos pasos:
 
 **1. Acceder a la transacción PFCG**: Esta transacción permite al administrador modificar los roles de usuario y configurar sus autorizaciones.
-
 **2. Modificar el rol del usuario**: Una vez en PFCG, selecciona el rol correspondiente al usuario que necesita la autorización y haz clic en "Modificar".
 
 <p class="image centered">
@@ -95,9 +88,7 @@ Para otorgar al usuario el permiso de exportación, el administrador de SAP debe
 Si después de asignar la actividad 61 el botón "Export" continúa en gris, pueden existir configuraciones adicionales que estén afectando la funcionalidad:
 
 **- Restricciones en el perfil del usuario**: Revisa si el usuario tiene restricciones en su perfil de sistema que limitan el uso de ciertas funciones en SAP.
-
 **- Limitaciones de seguridad globales**: Algunas empresas implementan configuraciones de seguridad globales para limitar la exportación de datos por razones de privacidad. Consulta con el equipo de seguridad para verificar si existen políticas que afectan a los usuarios.
-
 **- Configuraciones específicas de transacción**: En algunas transacciones, el botón de exportación puede estar deshabilitado debido a la configuración de la transacción específica. Verifica si el comportamiento ocurre en todas las transacciones o solo en una en particular.
 
 ## Consideraciones de seguridad
