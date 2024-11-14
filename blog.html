@@ -51,10 +51,10 @@ title: Blog
                                     </a>
                                     <header>
                                         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                                        <h4>{{ post.subtitle }}</h4>
+                                        <!-- <h4>{{ post.subtitle }}</h4> -->
                                         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
                                     </header>
-                                    <p>{{ post.content | truncate: 200 }}</p>
+                                    <!-- <p>{{ post.content | truncate: 200 }}</p> -->
                                 </article>
                             {% if mod == 0 or forloop.last %}
                             </div>
