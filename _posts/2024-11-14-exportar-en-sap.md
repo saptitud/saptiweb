@@ -40,60 +40,31 @@ El objeto **S_GUI** incluye diferentes valores de actividad que determinan qué 
 
 Si un usuario informa que no puede exportar listas en SAP, el administrador puede verificar los permisos del usuario y buscar la configuración de S_GUI en su rol.
 
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/1.png" alt="Image 1">
-</p>
+![Imagen 1](/assets/images/extraer_en_sap/1.png)
 
 ### Pasos para resolver el problema de autorización
 
 Para otorgar al usuario el permiso de exportación, el administrador de SAP debe seguir estos pasos:
 
 1. **Acceder a la transacción PFCG**: Esta transacción permite al administrador modificar los roles de usuario y configurar sus autorizaciones.
-
 2. **Modificar el rol del usuario**: Una vez en PFCG, selecciona el rol correspondiente al usuario que necesita la autorización y haz clic en "Modificar".
-
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/2.png" alt="Image 2">
-</p>
-
+![Imagen 2](/assets/images/extraer_en_sap/2.png)
 3. **Accede a la actualización de los datos de autorización**: En el apartado de autorizaciones, accede al “Modo de experto para generar perfiles” actualizando la última versión disponible.
-
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/3.png" alt="Image 3">
-</p>
-
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/4.png" alt="Image 4">
-</p>
-
+![Imagen 3](/assets/images/extraer_en_sap/3.png)
+![Imagen 4](/assets/images/extraer_en_sap/4.png)
 4. **Agregar el objeto S_GUI**: Agrega el objeto S_GUI si aún no está presente en el rol del usuario. Asegúrate de asignarle la actividad 61 (Exportar) para habilitar la opción de exportación.
-
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/5.png" alt="Image 5">
-</p>
-
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/6.png" alt="Image 6">
-</p>
-
+![Imagen 5](/assets/images/extraer_en_sap/5.png)
+![Imagen 6](/assets/images/extraer_en_sap/6.png)
 5. **Generar y asignar el rol**: Tras realizar los cambios, guarda y genera el rol actualizado para que los nuevos permisos sean efectivos. Al pulsar el botón de “Generar” puede que aparezca un pop-up informando que hay autorizaciones pendientes, depende de cómo se haya mantenido el rol que estás modificando, podéis darle a Generar de todas formas. Luego, verifica que el usuario pueda realizar la exportación sin problemas.
-
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/7.png" alt="Image 7">
-</p>
-
-<p align="center">
-  <img src="/assets/images/extraer_en_sap/8.png" alt="Image 8">
-</p>
+![Imagen 7](/assets/images/extraer_en_sap/7.png)
+![Imagen 8](/assets/images/extraer_en_sap/8.png)
 
 ### ¿Qué hacer si "Export" sigue apareciendo en gris después de configurar la autorización?
 
 Si después de asignar la actividad 61 el botón "Export" continúa en gris, pueden existir configuraciones adicionales que estén afectando la funcionalidad:
 
 - **Restricciones en el perfil del usuario**: Revisa si el usuario tiene restricciones en su perfil de sistema que limitan el uso de ciertas funciones en SAP.
-
 - **Limitaciones de seguridad globales**: Algunas empresas implementan configuraciones de seguridad globales para limitar la exportación de datos por razones de privacidad. Consulta con el equipo de seguridad para verificar si existen políticas que afectan a los usuarios.
-
 - **Configuraciones específicas de transacción**: En algunas transacciones, el botón de exportación puede estar deshabilitado debido a la configuración de la transacción específica. Verifica si el comportamiento ocurre en todas las transacciones o solo en una en particular.
 
 ## Consideraciones de seguridad
