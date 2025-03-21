@@ -11,7 +11,9 @@
                             <header>
                                 <h3>¿Quiéres optimizar tus procesos con SAP?</h3>
                             </header>
-                            <p>¡Contacta con nosotros!</p>
+                            <p>¡Contacta con nosotros!<br><br>
+                            <a href="{% if page.url == '/' %}#contact{% else %}/index.html#contact{% endif %}" class="button scrolly">Formulario</a></p>
+
                             <ul class="icons">
                                 <li><a href="mailto:info@saptitud.es" class="icon fa-regular fa-envelope"><span class="label">Email</span></a></li>
                                 <li><a href="https://www.linkedin.com/company/saptitud-solutions/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>

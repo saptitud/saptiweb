@@ -1,56 +1,111 @@
+---
+layout: none
+title: Blog
+---
+
 <!DOCTYPE HTML>
 <html>
 	<head>
 		{% include head.html %}
 	</head>
-	<body class="no-sidebar is-preload">
+	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-                    <!-- Nav -->
-					{% include nav.html %}
+				<!-- Nav -->
+				{% include nav.html %}
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="/index.html" id="logo">{{ site.centertitle }}</a></h1>
-							</header>
+				<!-- Inner -->
+				<div class="inner">
+					<header>
+						<h1><a href="index.html" id="logo">Blog</a></h1>
+					</header>
+				</div>
+			</div>
+
+			<!-- Main -->
+			<div class="wrapper style1">
+
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-8 col-12-mobile" id="content">
+							<article id="main" class="post-content">
+								<header>
+									<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+									<time datetime="{{ page.date | date_to_xmlschema }}">
+										{{ page.date | date: "%d/%m/%Y" }}
+									</time>
+								</header>
+								<a href="#" class="image featured"><img src="{{ page.image }}" alt="{{ page.title }}" /></a>
+								{{ content }}
+							</article>
 						</div>
-
+						<div class="col-4 col-12-mobile" id="sidebar">
+							<hr class="first" />
+							<section>
+								<header>
+									<h3><a href="#">Contacta con nosotros!</a></h3>
+								</header>
+								<form id="my-form" action="https://formspree.io/f/maneejgn" method="POST">
+									<label>
+										Tu email:
+										<input type="email" name="email" required/>
+									</label>
+									<label>
+										Mensaje:
+										<textarea name="message" required></textarea>
+									</label>
+									<button id="my-form-button" class="button">Enviar</button>
+									<p id="my-form-status"></p>
+								</form>
+								
+							</section>
+							<hr />
+							<section>
+								<header>
+									<h3><a href="#">Entradas anteriores</a></h3>
+								</header>
+								
+								<div class="row gtr-50">
+									{% for post in site.posts %}
+									<div class="col-4">
+										<a href="{{ post.url}}" class="image fit"><img src="{{ post.image }}" alt="{{ post.title }}" /></a>
+									</div>
+									<div class="col-8">
+										<time datetime="{{ post.date | date_to_xmlschema }}">
+											{{ post.date | date: "%d/%m/%Y" }}
+										</time>
+										<h4><a href="{{ post.url}}"> {{ post.title}}</a></h4>
+										
+										
+									</div>
+									{% endfor %}
+								</div>
+								
+							</section>
+						</div>
+					</div>
 					
 				</div>
 
-			<!-- Main -->
-				<div class="wrapper style1">
-
-					<div class="container">
-						<article id="main" class="special">
-							<header>
-								<h2><a href="#">{{ page.title }}</a></h2>
-                                {{ page.date | date: "%d/%m/%Y" }}
-								<!--  <p> -->
-									<!--  {{ page.subtitle }}<br> -->
-								<!-- </p> --> 
-							</header>
-                            <!-- <a href="#" class="image featured"><img src="{{ page.image }}" alt=""></a> -->
-                            <p>
-                            {{ content}}
-                            </p>
-						</article>
-					</div>
-
-				</div>
+			</div>
 
 			<!-- Footer -->
-				{% include footer.html %}
-				
+			{% include footer.html %}
 
 		</div>
 
 		<!-- Scripts -->
-		{% include scripts.html %}
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

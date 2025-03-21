@@ -2,3 +2,64 @@
 .hrcus {
     margin-bottom: 6em;
 }
+
+article h2 {
+    font-size: 2.20em;
+}
+
+article h3 {
+    font-size: 1.65em;
+}
+
+article h4 {
+    font-size: 1.40em;
+}
+
+.center-button {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center;
+    height: 4em;
+    
+}
+
+.wide-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 3em;
+    font-size: 15px!important;
+    
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 1280px) {
+    
+}
+
+@media (max-width: 840px) {
+    
+}
+
+@media (max-width: 736px) {
+
+    article h2 {
+        font-size: 1.5em!important;
+    }
+
+    article h3 {
+        font-size: 1.2em!important;
+    }
+
+    .center-button {
+        height: 4em;
+    }
+}

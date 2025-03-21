@@ -8,73 +8,105 @@ title: Blog
 	<head>
 		{% include head.html %}
 	</head>
-	<body class="no-sidebar is-preload">
+	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-                    <!-- Nav -->
-					{% include nav.html %}
+				<!-- Nav -->
+				{% include nav.html %}
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">{{ site.centertitle }}</a></h1>
-							</header>
+				<!-- Inner -->
+				<div class="inner">
+					<header>
+						<h1><a href="index.html" id="logo">Blog</a></h1>
+					</header>
+				</div>
+			</div>
+
+			<!-- Main -->
+			<div class="wrapper style1">
+
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-8 col-12-mobile" id="content">
+							<article id="main" class="post-content">
+								{% assign latest_post = site.posts | first %}
+								<header>
+									<h2><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h2>
+									<time datetime="{{ latest_post.date | date_to_xmlschema }}">
+										{{ latest_post.date | date: "%d/%m/%Y" }}
+									</time>
+								</header>
+								<a href="#" class="image featured"><img src="{{ latest_post.image }}" alt="{{ latest_post.title }}" /></a>
+								{{ latest_post.content }}
+							</article>
 						</div>
-
+						<div class="col-4 col-12-mobile" id="sidebar">
+							<hr class="first" />
+							<section>
+								<header>
+									<h3><a href="#">Contacta con nosotros!</a></h3>
+								</header>
+								<form id="my-form" action="https://formspree.io/f/maneejgn" method="POST">
+									<label>
+										Tu email:
+										<input type="email" name="email" required/>
+									</label>
+									<label>
+										Mensaje:
+										<textarea name="message" required></textarea>
+									</label>
+									<button id="my-form-button" class="button wide-button">Enviar</button>
+									<p id="my-form-status"></p>
+								</form>
+								
+							</section>
+							<hr />
+							<section>
+								<header>
+									<h3>Entradas anteriores</h3>
+								</header>
+								
+								<div class="row gtr-50">
+									{% for post in site.posts %}
+									<div class="col-4">
+										<a href="{{ post.url}}" class="image fit"><img src="{{ post.image }}" alt="{{ post.title }}" /></a>
+									</div>
+									<div class="col-8">
+										<time datetime="{{ post.date | date_to_xmlschema }}">
+											{{ post.date | date: "%d/%m/%Y" }}
+										</time>
+										<h4><a href="{{ post.url }}">{{ post.title}}</a></h4>
+										
+										
+									</div>
+									{% endfor %}
+								</div>
+								
+							</section>
+						</div>
+					</div>
 					
 				</div>
 
-            <!-- Main -->
-				<div class="wrapper style1">
-
-					<div class="container">
-						<article id="main" class="special">
-							<header>
-								<h2><a href="#">Blog</a></h2>
-							</header>
-
-
-						</article>
-						<hr class="hrcus"/>
-                        {% for post in site.posts %}
-                            {% assign mod = forloop.index | modulo: 3 %}
-                            {% if mod == 1 %}
-                            <br><br>
-                            <div class="row">
-                            {% endif %}
-                                <article class="col-4 col-12-mobile special">
-                                    <header>
-                                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-				    	<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
-					<p></p>
-                                        <!-- <h4>{{ post.subtitle }}</h4> -->
-					<a href="{{ post.url }}" class="image featured">
-                                        	<img src="{{ post.image }}" alt="{{ post.title }}" />
-                                    	</a>
-                                    </header>
-                                    <!-- <p>{{ post.content | truncate: 200 }}</p> -->
-                                </article>
-                            {% if mod == 0 or forloop.last %}
-                            </div>
-                            {% endif %}
-                        {% endfor %}
-					</div>
-
-				</div>
-
-		
+			</div>
 
 			<!-- Footer -->
-				{% include footer.html %}
-				
+			{% include footer.html %}
 
 		</div>
 
 		<!-- Scripts -->
-		{% include scripts.html %}
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

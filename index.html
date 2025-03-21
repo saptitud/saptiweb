@@ -12,103 +12,123 @@ title: Home
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-					<!-- Nav -->
-					{% include nav.html %}
-						
-
-					<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="index.html" id="logo">{{ site.centertitle }}</a></h1>
-							<hr />
-							<p>{{ site.centersub }}</p>
-						</header>
-						<footer>
-							<a href="#features" class="button circled scrolly"><i class="fa-solid fa-caret-down fa-2xl fa-beat"style="--fa-animation-duration: 3s;"></i></a>
-						</footer>
-					</div>
-
+				<!-- Nav -->
+				{% include nav.html %}
 					
 
+				<!-- Inner -->
+				<div class="inner">
+					<header>
+						<h1><a href="index.html" id="logo">{{ site.centertitle }}</a></h1>
+						<hr />
+						<p>{{ site.centersub }}</p>
+					</header>
+					<footer>
+						<a href="#contact" class="button circled scrolly"><i class="fa-solid fa-caret-down fa-2xl fa-beat"style="--fa-animation-duration: 3s;"></i></a>
+					</footer>
 				</div>
 
+			</div>
+			<!-- Contact Form -->
+			<div class="wrapper style1">
+				<section id="contact" class="container special">
+					<header>
+						<h2>Contacta con nosotros</h2>
+						<p>Rellena el formulario y nos pondremos en contacto contigo.</p>
+					</header>
+
+					<form class="conformindex" id="my-form" action="https://formspree.io/f/maneejgn" method="POST">
+						<label>
+							Tu email:
+							<input type="email" name="email" required/>
+						</label>
+						<label>
+							Mensaje:
+							<textarea name="message" required></textarea>
+						</label>
+						<button id="my-form-button" class="button center-button">Enviar</button>
+						<p id="my-form-status"></p>
+					</form>
+
+				</section>
+			</div>
 			
 			<!-- Features -->
-				<div class="wrapper style1">
+			<div class="wrapper style1">
 
-					<section id="features" class="container special">
-						<header>
-							<h2>{{ site.title1 }}</h2>
-							<p>{{ site.exp1 }}</p>
-						</header>
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="/assets/images/pic1.avif" alt="" /></a>
-								<header>
-									<h3><a href="#">Tu socio en la transformación digital del sector financiero.</a></h3>
-								</header>
-								<p>
-									Simplificamos tus operaciones con soluciones SAP a medida. Desde migraciones hasta interfaces personalizadas, te acompañamos en cada paso.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="/assets/images/pic2.avif" alt="" /></a>
-								<header>
-									<h3><a href="#">Beneficios clave</a></h3>
-								</header>
-								<p>
-									<ul>
-										<li><b>Agilidad</b>: Toma decisiones más rápidas y precisas.</li>
-										<li><b>Seguridad</b>: Protege tu información financiera con las últimas tecnologías.</li>
-										<li><b>Compliance</b>: Cumple con las normativas del sector sin esfuerzo.</li>
-										<li><b>Eficiencia</b>: Reduce costos y optimiza recursos.</li>
-									</ul>
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="/assets/images/pic3.avif" alt="" /></a>
-								<header>
-									<h3><a href="#">Soporte SAP</a></h3>
-								</header>
-								<p>
-									Siempre a tu lado. Nuestro soporte técnico te garantiza una operación ininterrumpida.
-								</p>
-							</article>
-						</div>
-					</section>
+				<section id="features" class="container special">
+					<header>
+						<h2>{{ site.title1 }}</h2>
+						<p>{{ site.exp1 }}</p>
+					</header>
+					<div class="row">
+						<article class="col-4 col-12-mobile special">
+							<a href="#" class="image featured"><img src="/assets/images/pic1.avif" alt="" /></a>
+							<header>
+								<h3><a href="#">Tu socio en la transformación digital del sector financiero.</a></h3>
+							</header>
+							<p>
+								Simplificamos tus operaciones con soluciones SAP a medida. Desde migraciones hasta interfaces personalizadas, te acompañamos en cada paso.
+							</p>
+						</article>
+						<article class="col-4 col-12-mobile special">
+							<a href="#" class="image featured"><img src="/assets/images/pic2.avif" alt="" /></a>
+							<header>
+								<h3><a href="#">Beneficios clave</a></h3>
+							</header>
+							<p>
+								<ul>
+									<li><b>Agilidad</b>: Toma decisiones más rápidas y precisas.</li>
+									<li><b>Seguridad</b>: Protege tu información financiera con las últimas tecnologías.</li>
+									<li><b>Compliance</b>: Cumple con las normativas del sector sin esfuerzo.</li>
+									<li><b>Eficiencia</b>: Reduce costos y optimiza recursos.</li>
+								</ul>
+							</p>
+						</article>
+						<article class="col-4 col-12-mobile special">
+							<a href="#" class="image featured"><img src="/assets/images/pic3.avif" alt="" /></a>
+							<header>
+								<h3><a href="#">Soporte SAP</a></h3>
+							</header>
+							<p>
+								Siempre a tu lado. Nuestro soporte técnico te garantiza una operación ininterrumpida.
+							</p>
+						</article>
+					</div>
+				</section>
 
-				</div>
+			</div>
 
 			<!-- Main -->
-				<div class="wrapper style2">
+			<div class="wrapper style2">
+				
+				<article id="main" class="container special">
+					<a href="#" class="image featured"><img src="/assets/images/pic6.avif" alt="" /></a>
 					
-					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="/assets/images/pic6.avif" alt="" /></a>
-						
-						<header id="services">
-							<h2><a href="#">{{ site.title2 }}</a></h2>
-							<p>
-								{{ site.exp2}}
-							</p>
-						</header>
+					<header id="services">
+						<h2><a href="#">{{ site.title2 }}</a></h2>
 						<p>
-							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Soporte SAP</h3>
-							<p>Siempre a tu lado. Nuestro soporte técnico te garantiza una operación ininterrumpida. Soporte SAP 24/7 a tu disposición.</p>
-							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Interfaces</h3>
-							<p>Conecta tus sistemas y mejora la eficiencia. Desarrollamos interfaces personalizadas para integrar SAP con tus otras aplicaciones, optimizando el flujo de información y eliminando tareas manuales.</p>
-							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Soporte técnico</h3>
-							<p>Contamos con un equipo de expertos listos para ayudarte a resolver cualquier incidencia y mantener tu sistema funcionando al máximo rendimiento.</p>
-							<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Optimización de proceso</h3>
-							<p>Maximiza la eficiencia de tus procesos con SAP. Identificamos y eliminamos cuellos de botella para optimizar tus operaciones y reducir costos.</p>
+							{{ site.exp2}}
 						</p>
-						
-					</article>
-				</div>
+					</header>
+					<p>
+						<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Soporte SAP</h3>
+						<p>Siempre a tu lado. Nuestro soporte técnico te garantiza una operación ininterrumpida. Soporte SAP 24/7 a tu disposición.</p>
+						<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Interfaces</h3>
+						<p>Conecta tus sistemas y mejora la eficiencia. Desarrollamos interfaces personalizadas para integrar SAP con tus otras aplicaciones, optimizando el flujo de información y eliminando tareas manuales.</p>
+						<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Soporte técnico</h3>
+						<p>Contamos con un equipo de expertos listos para ayudarte a resolver cualquier incidencia y mantener tu sistema funcionando al máximo rendimiento.</p>
+						<h3><i class="fa-regular fa-circle-dot fa-2xs"></i> Optimización de proceso</h3>
+						<p>Maximiza la eficiencia de tus procesos con SAP. Identificamos y eliminamos cuellos de botella para optimizar tus operaciones y reducir costos.</p>
+					</p>
+					
+				</article>
+			</div>
 
 			<!-- Footer -->
-				{% include footer.html %}
+			{% include footer.html %}
 				
 
 		</div>

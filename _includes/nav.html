@@ -5,6 +5,7 @@
             <li><a href="#services" class="scrolly">{{ site.nav2 }}</a></li>
             <li><a href="#contact" class="scrolly">{{ site.nav3 }}</a></li>
         {% endif %}
-        <li><a href="/blog.html">{{ site.nav4 }}</a></li>
+        {% assign latest_post = site.posts | first %}
+        <li><a href="{{ latest_post.url }}">{{ site.nav4 }}</a></li>
     </ul>
 </nav>
