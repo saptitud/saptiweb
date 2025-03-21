@@ -17,7 +17,7 @@ expl: Una consultoría especializada en SAP que brinda servicios de consultoría
 title2: Nuestros Servicios
 exp2: Ofrecemos soluciones personalizadas para integrar y optimizar tus procesos con SAP, impulsando la eficiencia y reduciendo costos operativos.
 
-#permalink: /:year-:month-:day/:title/
+permalink: /blog/:title/
 
 blogtitle: Últimas Entradas
 blogsub: Ultimas entradas del blog
